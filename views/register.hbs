@@ -1,0 +1,35 @@
+{{#if alert}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{alert}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
+<div class="container mt-5 text-center justify-content-center d-flex">
+    <div class="card" style="width: 35rem;">
+        <div class="card-header h2 text-center">Register Form</div>
+        <div class="card-body mt-4">
+            <form action="/register" method="POST" novalidate>
+                <div class="mb-3">
+                    <label for="name-reg" class="form-label h5">Account Name</label>
+                    <input type="text" class="form-control" id="name-reg" value="{{this.account_name}}" placeholder="Account Name" name="account_name">
+                </div>
+                <div class="mb-3">
+                    <label for="password-reg" class="form-label h5">Password</label>
+                    <input type="password" class="form-control" id="password-reg" value="{{this.password}}" placeholder="Password" name="password">
+                </div>
+                <div class="mb-3">
+                    <label for="password-conf-reg" class="form-label h5">Confirm Password</label>
+                    <input type="password" class="form-control" id="password-conf-reg" value="{{this.password_confirm}}" placeholder="Confirm Password" name="password-confirm">
+                </div>
+
+                <button type="submit" class="btn btn-primary center-block mt-4">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{{#if message }}
+<h4 class="alert alert-danger mt-4">{{message}}</h4>
+{{/if}}
