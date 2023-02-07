@@ -34,7 +34,6 @@ exports.view = (req, res, next) => {
         console.log('The data from contact table: \n', rows);
     });
   }else{
-    req.flash('success', 'Please login first!');
     res.redirect('/login');
   }
 };
