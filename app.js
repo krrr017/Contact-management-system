@@ -9,7 +9,7 @@ const flash = require('express-flash');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 5001;
 
 
 
@@ -22,6 +22,7 @@ app.use(cookieParser());
 const handlebars = exphbs.create({ extname: '.hbs', });
 app.engine('.hbs', handlebars.engine);
 app.set('view engine', '.hbs');
+app.set('views', path.join(__dirname, 'views'))
 
 
 const oneDay = 24 * 60 * 60 * 1000;

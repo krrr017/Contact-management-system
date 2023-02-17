@@ -5,7 +5,6 @@ const userController = require('../controllers/userController');
 
 
 
-router.get('/favicon.ico', (req, res) => res.status(204));
 router.get('/register', userController.register);
 router.post('/register', userController.createAccount);
 router.get('/login', userController.login);
